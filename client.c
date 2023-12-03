@@ -25,6 +25,11 @@ int main(void) {
     	  // opening data file in read mode
 	  char *filename = "data.txt";
 	  FILE *fp = fopen(filename, "r");
+	    // Reading the text file
+	  if (fp == NULL) {
+	    printf("[ERROR] reading the file");
+	    system(./menu);
+	  }
 
 	  // Creating a UDP socket
 	  server_sockfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -36,11 +41,7 @@ int main(void) {
 	  server_addr.sin_port = port;
 	  server_addr.sin_addr.s_addr = inet_addr(ip);
 
-	  // Reading the text file
-	  if (fp == NULL) {
-	    error_handler("[ERROR] reading the file");
-	  }
-
+	
 	  // Sending the file data to the server
 	  send_file_data(fp, server_sockfd, server_addr);
 
