@@ -27,8 +27,7 @@ int main(void) {
 	  FILE *fp = fopen(filename, "r");
 	    // Reading the text file
 	  if (fp == NULL) {
-	    printf("[ERROR] reading the file");
-	    system(./menu);
+	    error_handler("[ERROR] reading the file");
 	  }
 
 	  // Creating a UDP socket
