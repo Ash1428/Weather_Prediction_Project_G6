@@ -12,6 +12,7 @@ int main(){
 	printf("2 : Display Data\n");
 	printf("3 : Send Data\n");
 	printf("4 : Stop Server / Exit\n");
+	printf("-----------------------------:\n");
 	printf("Enter the choice :\n");
 	scanf("%d",&choice);
 	
