@@ -1,11 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
-
 int main(){
 	int choice;
-	
 	printf("\nWeather Prediction Dashboard\n");
 	printf("-----------------------------:\n");
 	printf("1 : Data Input \n");
