@@ -2,10 +2,7 @@
 #include<fcntl.h>
 #include<semaphore.h>
 #include<stdlib.h>
-
-//function declaration
-void error_handler(char* message);
-
+#include "errorhandling.h" //error handling function
  
 int main(){
 	int sval;
@@ -27,11 +24,6 @@ int main(){
 	return 0;
 }
 
-//error handler function
-void error_handler(char *message){
-	perror(message);
-	exit(EXIT_FAILURE);
-}
 
 
 
