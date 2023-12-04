@@ -1,9 +1,9 @@
 #include "server.h"
+#include "errorhandling.h"
 #define SIZE 1024
 
 //function declaration
 void Display(int sockfd, struct sockaddr_in addr);
-void error_handler(char* message);
 
 int main() {
 
@@ -68,8 +68,3 @@ void Display(int sockfd, struct sockaddr_in addr) {
 
 }
 
-//error handler function
-void error_handler(char* message){
-	perror(message);
-	exit(EXIT_FAILURE);
-}
