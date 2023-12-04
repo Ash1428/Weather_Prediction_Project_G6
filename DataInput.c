@@ -1,8 +1,6 @@
 #include "datainput.h" //for all the required headerfiles
 #include "structure.h" // for structure declaration
-
-//Function for error handling
-void error_handler(char* message);
+#include "errorhandling.h" // error handling function defined here
 
 int main() {
 
@@ -39,11 +37,5 @@ int main() {
     return 0;
 }
 
-//error handler function
-void error_handler(char* message){
-	//prints the error message 
-	perror(message);
-	exit(EXIT_FAILURE);
-}
 
 
