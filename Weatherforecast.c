@@ -1,4 +1,4 @@
-#include "weather.h"
+#include "weather.h"//all the required headerfiles
 #include "structure.h"//structure declaration
 
 static char prediction[100];
