@@ -1,4 +1,4 @@
-#include "client.h"
+#include "client.h"//all the required headerfiles
 #define SIZE 1024
 
 //function declarations
