@@ -1,10 +1,9 @@
 #include "client.h"//all the required headerfiles
+#include "errorhandling.h"// error handling function
 #define SIZE 1024
 
 //function declarations
 void send_file_data(FILE *fp, int sockfd, struct sockaddr_in addr);
-void error_handler(char* message);
-
 
 int main(void) {
     
@@ -75,10 +74,4 @@ void send_file_data(FILE *fp, int sockfd, struct sockaddr_in addr){
   sendto(sockfd, buffer, SIZE, 0, (struct sockaddr *)&addr, sizeof(addr));
 
   fclose(fp);
-}
-
-//error_handler function
-void error_handler(char* message){
-	perror(message);
-	exit(EXIT_FAILURE);
 }
