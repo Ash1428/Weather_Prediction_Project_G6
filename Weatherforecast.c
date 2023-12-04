@@ -1,12 +1,12 @@
 #include "weather.h"//all the required headerfiles
 #include "structure.h"//structure declaration
+#include "errorhandling.h" // error handling 
 
 static char prediction[100];
 
 //function declarations
 void writeToFile(WeatherData *data);
 void makePrediction(WeatherData *data);
-void error_handler(char* message);
 
 int main() {
     
@@ -47,14 +47,6 @@ int main() {
     system("./menu");
     return 0;
 }
-
-
-//error handler function
-void error_handler(char* message){
-	perror(message);
-	exit(EXIT_FAILURE);
-}
-
 	
 //weather Prediction Function	
 void makePrediction(WeatherData *data) {
